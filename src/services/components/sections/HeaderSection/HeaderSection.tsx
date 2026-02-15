@@ -1,8 +1,9 @@
 import React from "react";
-import type { HeaderSectionProps } from '../../types/ServicesDetail.interface';
 import styles from "./HeaderSection.module.css";
 
-const HeaderSection: React.FC<HeaderSectionProps> = ({
+import type { IHeaderSection } from "../../../types";
+
+const HeaderSection: React.FC<IHeaderSection> = ({
   title_emphasized_part,
   title_base_part,
   sub_title

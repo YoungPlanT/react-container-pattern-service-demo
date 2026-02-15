@@ -54,50 +54,50 @@
 
 ``` json
 "service_name": {
-    "service_content_schema": [
-      "HeaderSection",
-      "CardSection",
-      "BulletedListSection",
-      "NumberedListSection",
-      "ButtonSection"
-    ],
-    "data_service_content": {
-      "header_section": {
-        "title_emphasized_part": "",
-        "title_base_part": "",
-        "sub_title": ""
-      },
-      "card_section": {
-        "title": "",
-        "cards_data": [
-          ""
-        ]
-      },
-      "bulleted_list_section": {
-        "title": "",
-        "bulleted_list_data": {
-          "0": {
-            "img_url": "",
-            "data": ""
-          },
-          "1": {
-            "img_url": "",
-            "data": "" 
-          }
+  "service_content_schema": [
+    "HeaderSection",
+    "CardSection",
+    "BulletedListSection",
+    "NumberedListSection",
+    "ButtonSection"
+  ],
+  "data_service_content": {
+    "header_section": {
+      "title_emphasized_part": "",
+      "title_base_part": "",
+      "sub_title": ""
+    },
+    "card_section": {
+      "title": "",
+      "cards_data": [
+        ""
+      ]
+    },
+    "bulleted_list_section": {
+      "title": "",
+      "bulleted_list_data": {
+        "0": {
+          "img_path": "",
+          "data": ""
+        },
+        "1": {
+          "img_path": "",
+          "data": "" 
         }
-      },
-      "numbered_list_section": {
-        "title": "",
-        "numbered_list_data": [
-          "",
-          ""
-        ]
-      },
-      "button_section": {
-        "text_on_button": ""
       }
+    },
+    "numbered_list_section": {
+      "title": "",
+      "numbered_list_data": [
+        "",
+        ""
+      ]
+    },
+    "button_section": {
+      "text_on_button": ""
     }
   }
+}
 ```
 Для управления порядком отображения разделов (например, header_section, card_section) на странице услуги используется поле **"service_content_schema"**.
 Оно содержит массив строк, где каждая строка — это ключ одного из компонентов.
@@ -130,16 +130,17 @@
   "title": "",
   "bulleted_list_data": {
     "0": {
-      "img_url": "",
+      "img_path": "",
       "data": ""
     },
     "1": {
-      "img_url": "",
+      "img_path": "",
       "data": "" 
     }
   }
 }
 ```
+!!! Пути и особенности (написать)
 
 ### 4. NumberedListSection
 ```json
