@@ -167,7 +167,7 @@ export const BulletedListSectionSchema = z.object({
       data: z.string()
         .trim()
         .refine(
-          (val) => val.length < validationConfig.stringValidation.STRING_MIN_LENGTH,
+          (val) => val.length > validationConfig.stringValidation.STRING_MIN_LENGTH,
           {
             message: "Field 'data' cannot be empty",
             params: {
@@ -177,7 +177,7 @@ export const BulletedListSectionSchema = z.object({
           }
         )
         .refine(
-          (val) => val.length > validationConfig.stringValidation.STRING_MAX_LENGTH,
+          (val) => val.length < validationConfig.stringValidation.STRING_MAX_LENGTH,
           {
             message: "Field 'data' exceeds maximum length",
             params: {
@@ -258,7 +258,7 @@ export type ButtonSection = z.infer<typeof ButtonSectionSchema>;
 
 
 
-
+// union all section type
 export const SectionSchema = z.discriminatedUnion("type", [
   HeaderSectionSchema,
   CardSectionSchema,
@@ -269,6 +269,7 @@ export const SectionSchema = z.discriminatedUnion("type", [
 
 export type Section = z.infer<typeof SectionSchema>;
 
+// data content container
 export const DataServiceContentSchema = z.object({
   header_section: HeaderSectionSchema.optional(),
   card_section: CardSectionSchema.optional(),
@@ -279,4 +280,25 @@ export const DataServiceContentSchema = z.object({
 
 export type DataServiceContent = z.infer<typeof DataServiceContentSchema>;
 
-// Schema for a single service entry
+// JSON types for service schema
+export const JsonSectionTypeSchema = z.enum([
+  "HeaderSection", 
+  "CardSection", 
+  "BulletedListSection", 
+  "NumberedListSection", 
+  "ButtonSection"
+]);
+
+export type JsonSectionType = z.infer<typeof JsonSectionTypeSchema>;
+
+// Full service schema
+export const ServiceSchema = z.object({
+  service_content_schema: z.array(JsonSectionTypeSchema),
+  data_service_content: DataServiceContentSchema,
+});
+
+export type Service = z.infer<typeof ServiceSchema>;
+
+// Collection of service
+export const ServiceJsonSchema = z.record(z.string(), ServiceSchema);
+export type ServiceJson = z.infer<typeof ServiceJsonSchema>;

@@ -1,5 +1,5 @@
 {
-  "сorporate_services": {
+  "corporate_services": {
     "service_content_schema": [
       "HeaderSection",
       "CardSection",
@@ -58,7 +58,7 @@
   },
 
 
-  "сommercial_disputes": {
+  "commercial_disputes": {
     "service_content_schema": [
       "HeaderSection",
       "BulletedListSection",
