@@ -4,7 +4,7 @@ import {
   expect,
 } from "vitest";
 import { z } from "zod";
-import createStringField from "../../../services/utils/schema.helper";
+import { createStringField } from "../../../features/services/utils";
 
 
 describe('createStringField', () => {
