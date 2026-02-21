@@ -39,10 +39,10 @@ export const useServiceData = () => {
         }
       ).filter((item): item is ServiceCardData => item !== null);
     } catch (error) {
-      console.error('getService function | Error loading service: ', error);
+      console.error('getService function | Failed to load data from JSON file: ', error);
       return [];
     }
-  }, [])
+  }, []);
 
   return {
     getService

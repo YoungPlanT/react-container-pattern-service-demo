@@ -11,8 +11,6 @@ describe('useServiceData', () => {
   it('returns service data', () => {
     const { result } = renderHook(() => useServiceData());
     const services = result.current.getService();
-    
-    // console.log(services);
 
     expect(Array.isArray(services)).toBe(true);
   });

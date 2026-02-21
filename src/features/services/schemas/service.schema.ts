@@ -86,7 +86,7 @@ export type CardSection = z.infer<typeof CardSectionSchema>;
 export const BulletedListSectionSchema = z.object({
   type: z.literal('bulleted_list_section').default('bulleted_list_section'),
   title: createStringField('title', {
-    required: true,
+    required: false,
     min: VALIDATION_CONFIG.stringValidation.STRING_MIN_LENGTH,
     max: VALIDATION_CONFIG.stringValidation.STRING_MAX_LENGTH,
   }),
@@ -109,7 +109,7 @@ export const BulletedListSectionSchema = z.object({
         }
 
         // Maximum length required
-        if (key.length < 3) {
+        if (key.length > 3) {
           ctx.addIssue({
             code: z.ZodIssueCode.too_big,
             maximum: 3,
@@ -187,7 +187,7 @@ export type BulletedListSection = z.infer<typeof BulletedListSectionSchema>;
 export const NumberedListSectionSchema = z.object({
   type: z.literal('numbered_list_section').default('numbered_list_section'),
   title: createStringField('title', {
-    required: true,
+    required: false,
     min: VALIDATION_CONFIG.stringValidation.STRING_MIN_LENGTH,
     max: VALIDATION_CONFIG.stringValidation.STRING_MAX_LENGTH
   }),
@@ -208,7 +208,7 @@ export const NumberedListSectionSchema = z.object({
       {
         message: `Array 'numbered_list_data' cannot contain more than ${VALIDATION_CONFIG.arrayValidation.ARRAY_MAX_LENGTH} items`,
         params: {
-          errorCode: 'ARRY_TOO_BIG',
+          errorCode: 'ARRAY_TOO_BIG',
           max: VALIDATION_CONFIG.arrayValidation.ARRAY_MAX_LENGTH,
           severity: 'error',
         }

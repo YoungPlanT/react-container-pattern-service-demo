@@ -21,5 +21,10 @@ export type {
 
 // export from '../schemas/service.schema'
 export {
+  ServiceSchema
+} from '../schemas/service.schema';
 
+export type {
+  DataServiceContent,
+  Service
 } from '../schemas/service.schema';

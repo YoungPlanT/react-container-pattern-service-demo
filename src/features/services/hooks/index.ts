@@ -1,1 +1,2 @@
-export { useServiceData } from './useServiceData'
+export { useServiceData } from './useServiceData';
+export { useSectionData } from './useSectionData';
