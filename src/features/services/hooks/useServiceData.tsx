@@ -5,7 +5,6 @@ import type {
 } from "../types";
 import {
   CardSectionSchema,
-  SLUG_TO_JSON_KEY
 } from "../types";
 
 
@@ -27,12 +26,8 @@ export const useServiceData = () => {
             return null;
           }
 
-          const slug = Object.entries(SLUG_TO_JSON_KEY).find(
-            ([jsonKey, _]) => jsonKey === validated.data.slug
-          )?.[1] as ServiceSlug;
-
           return {
-            slug,
+            slug: validated.data.slug,
             title: validated.data.title,
             subtitle: validated.data.subtitle,
           };

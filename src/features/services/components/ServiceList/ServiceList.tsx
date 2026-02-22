@@ -10,9 +10,7 @@ import styles from './ServiceList.module.css';
 const ServiceList: React.FC = () => {
   const { getService } = useServiceData();
   const services = getService();
-
-  console.log(services);
-
+  
   return (
     <div className="service-grid">
       {services.map((service) => (

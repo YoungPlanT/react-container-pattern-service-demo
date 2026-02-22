@@ -1,7 +1,7 @@
 import type { RouteObject } from "react-router-dom";
 import serviceRoutes from "../../features/services/config/service.routes";
 import MainLayout from "../layout/MainLayout";
-import HomePage from "../../pages/HomePage";
+import HomePage from "../../pages/HomePage/HomePage";
 
 const createAppRoutes = (): RouteObject[] => {
   const appRoutes: RouteObject[] = [

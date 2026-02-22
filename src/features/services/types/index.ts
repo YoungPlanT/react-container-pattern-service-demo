@@ -21,10 +21,17 @@ export type {
 
 // export from '../schemas/service.schema'
 export {
-  ServiceSchema
+  ServiceSchema,
 } from '../schemas/service.schema';
 
 export type {
   DataServiceContent,
-  Service
+  Service,
+  JsonSectionType,
+
+  HeaderSection,
+  CardSection,
+  BulletedListSection,
+  NumberedListSection,
+  ButtonSection,
 } from '../schemas/service.schema';
