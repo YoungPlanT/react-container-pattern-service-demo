@@ -1,0 +1,95 @@
+/* 
+  font-family: Actay
+*/
+
+@font-face {
+  font-family: "Actay Regular";
+  src: url("./fonts/Actay/regular/Actay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Actay Regular";
+  src: url("./fonts/Actay/regular/Actay-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Actay Condensed";
+  src: url("./fonts/Actay/condensed/ActayCondensed-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Actay Condensed";
+  src: url("./fonts/Actay/condensed/ActayCondensed-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Actay Wide";
+  src: url("./fonts/Actay/wide/ActayWide-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Actay Wide";
+  src: url("./fonts/Actay/wide/ActayWide-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 
+  font-family: NEXT ART
+*/
+
+@font-face {
+  font-family: "NEXT ART";
+  src: url("./fonts/NEXT_ART/NEXT\ ART_Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NEXT ART";
+  src: url("./fonts/NEXT_ART/NEXT\ ART_Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NEXT ART";
+  src: url("./fonts/NEXT_ART/NEXT\ ART_SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NEXT ART";
+  src: url("./fonts/NEXT_ART/NEXT\ ART_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NEXT ART";
+  src: url("./fonts/NEXT_ART/NEXT\ ART_Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

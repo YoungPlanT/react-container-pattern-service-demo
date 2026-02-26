@@ -9,6 +9,7 @@ import {
 import type { Service, ServiceSlug } from '../../types';
 import { useSectionData } from '../../hooks';
 import SectionMapper from '../../utils/sectionMapper';
+import styles from './ServiceDetail.module.css';
 
 const ServiceDetail: React.FC = () => {
   const { slug } = useParams<{ slug: ServiceSlug }>();
@@ -56,10 +57,13 @@ const ServiceDetail: React.FC = () => {
   }
 
   return (
-    <SectionMapper 
-      schema={service.service_content_schema}
-      data={service.data_service_content}
-    />
+    <div
+      className={ styles[".service-detail-page"] }>
+      <SectionMapper 
+        schema={service.service_content_schema}
+        data={service.data_service_content}
+      />
+    </div>
   )
 };
 
